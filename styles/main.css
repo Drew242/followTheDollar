@@ -1,21 +1,37 @@
 .body {
   background: url('../images/americaMoney.jpg') no-repeat left top;
   background-size: contain;
-  min-height: 35em;
+  min-height: 25em;
 }
 
-.search {
+.banner {
   text-align: center;
 }
 
+.headshot {
+  margin-top: 1%;
+  max-width: 10em;
+}
+
 .dem {
-  padding: 1%;
   min-height: 5em;
   background-color: blue;
+  color: white;
+  text-align: center;
 }
 
 .rep {
-  padding: 1%; 
   min-height: 5em;
   background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.candProf {
+  list-style: none;
+  text-align: left;
+}
+
+.muteGrey {
+  color: #000;
 }

@@ -7,9 +7,7 @@ angular.module('Dollar')
 function dollarFactory($http) {
   var candidateCall = {
     getInfo: function(URL) {
-      $http.get(URL).then(function (response) {
-                            return response;
-                          });
+      return $http.get(URL)
     }
   };
 

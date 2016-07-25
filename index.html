@@ -15,20 +15,36 @@
 
 <body ng-controller='followCtrl as follow'>
 
-  <div class='col-lg-8 col-lg-offset-2 body'>
-
-  </div>
-
-  <div class='col-lg-12 container-fluid search'>
+  <div class='container-fluid banner'>
     <h1>{{ follow.banner }}</h1>
   </div>
 
   <div class='col-lg-6 dem'>
-    <p>{{ follow.clinton }}</p>
+    <img class='headshot' src='/images/hillary.jpg'/>
+    <h1>{{ follow.clinton.cand_name }}</h1>
+      <ul class='candProf'>
+        <li>Party: {{ follow.clinton.party }}</li>
+        <li>State: {{ follow.clinton.state }}</li>
+        <li>Spent: {{ follow.clinton.spent | currency }}</li>
+        <li>Cash on hand: {{ follow.clinton.cash_on_hand | currency }}</li>
+        <li>Debt: {{ follow.clinton.debt | currency }}</li>
+        <li>Total: {{ follow.clinton.total | currency }}</li>
+      </ul>
+      <p class='muteGrey'>Source: {{ follow.clinton.source }}</p>
   </div>
 
   <div class='col-lg-6 rep'>
-    <p>{{ follow.trump }}</p>
+    <img class='headshot' src='/images/trump.png'/>
+    <h1>{{ follow.trump.cand_name }}</h1>
+    <ul class='candProf'>
+      <li>Party: {{ follow.trump.party }}</li>
+      <li>State: {{ follow.trump.state }}</li>
+      <li>Spent: {{ follow.trump.spent | currency }}</li>
+      <li>Cash on hand: {{ follow.trump.cash_on_hand | currency }}</li>
+      <li>Debt: {{ follow.trump.debt | currency }}</li>
+      <li>Total: {{ follow.trump.total | currency}}</li>
+    </ul>
+    <p class='muteGrey'>Source: {{ follow.trump.source }}</p>
   </div>
 
 </body>
