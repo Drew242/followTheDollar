@@ -1,0 +1,13 @@
+.body {
+  background: url('images/americaMoney.jpg') no-repeat left top;
+  background-size: contain;
+  min-height: 35em;
+}
+
+.search {
+  text-align: center;
+}
+
+.mute-grey {
+  color: #ddd; 
+}
