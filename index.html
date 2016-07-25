@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='Dollar'>
 <head>
   <title>Follow the Dollar</title>
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'/>
@@ -7,22 +7,28 @@
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js'></script>
-  <link rel='stylesheet' href='main.css'/>
-  <script src='app.js'></script>
+  <link rel='stylesheet' href='styles/main.css'/>
+  <script src='scripts/app.js'></script>
+  <script src='scripts/followCtrl.app.js'></script>
+  <script src='scripts/dollarFactory.app.js'></script>
 </head>
-<body>
 
-  <div class='col-lg-6 body'>
+<body ng-controller='followCtrl as follow'>
+
+  <div class='col-lg-8 col-lg-offset-2 body'>
 
   </div>
 
-  <div class='col-lg-6 search'>
-    <h1>Follow the Dollar</h1>
-    <p class='mute-grey'>Search by Candidate to see contributions versus stance on the issues</p>
-    <span>
-      <button class='btn btn-success'>$</button>
-    </span>
-    <input type='text'/>
+  <div class='col-lg-12 container-fluid search'>
+    <h1>{{ follow.banner }}</h1>
+  </div>
+
+  <div class='col-lg-6 dem'>
+    <p>{{ follow.clinton }}</p>
+  </div>
+
+  <div class='col-lg-6 rep'>
+    <p>{{ follow.trump }}</p>
   </div>
 
 </body>

@@ -1,0 +1,21 @@
+.body {
+  background: url('../images/americaMoney.jpg') no-repeat left top;
+  background-size: contain;
+  min-height: 35em;
+}
+
+.search {
+  text-align: center;
+}
+
+.dem {
+  padding: 1%;
+  min-height: 5em;
+  background-color: blue;
+}
+
+.rep {
+  padding: 1%; 
+  min-height: 5em;
+  background-color: red;
+}
