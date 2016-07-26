@@ -1,0 +1,13 @@
+<div class='col-lg-6 dem'>
+  <img class='headshot' src='/images/hillary.jpg'/>
+  <h1>{{ follow.clinton.cand_name }}</h1>
+    <ul class='candProf'>
+      <li>Party: {{ follow.clinton.party }}</li>
+      <li>State: {{ follow.clinton.state }}</li>
+      <li>Spent: {{ follow.clinton.spent | currency }}</li>
+      <li>Cash on hand: {{ follow.clinton.cash_on_hand | currency }}</li>
+      <li>Debt: {{ follow.clinton.debt | currency }}</li>
+      <li>Total: {{ follow.clinton.total | currency }}</li>
+    </ul>
+    <p class='muteGrey'>Source: {{ follow.clinton.source }}</p>
+</div>

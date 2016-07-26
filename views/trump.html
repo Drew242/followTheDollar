@@ -1,0 +1,13 @@
+<div class='col-lg-6 rep'>
+  <img class='headshot' src='/images/trump.png'/>
+  <h1>{{ follow.trump.cand_name }}</h1>
+  <ul class='candProf'>
+    <li>Party: {{ follow.trump.party }}</li>
+    <li>State: {{ follow.trump.state }}</li>
+    <li>Spent: {{ follow.trump.spent | currency }}</li>
+    <li>Cash on hand: {{ follow.trump.cash_on_hand | currency }}</li>
+    <li>Debt: {{ follow.trump.debt | currency }}</li>
+    <li>Total: {{ follow.trump.total | currency}}</li>
+  </ul>
+  <p class='muteGrey'>Source: {{ follow.trump.source }}</p>
+</div>

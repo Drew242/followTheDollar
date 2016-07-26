@@ -1,1 +1,1 @@
-angular.module('Dollar', []);
+var myDollar = angular.module('Dollar', ['ngRoute'])

@@ -17,5 +17,4 @@ function followCtrl(dollarFactory) {
                   follow.clinton = response.data.response.summary["@attributes"];
                   });
 
-  window.follow = follow
 }

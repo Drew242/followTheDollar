@@ -1,7 +1,16 @@
-.body {
+body {
+  padding-top: 8em;
+  background: url('../images/americanFlagMoney.jpg') no-repeat left top;
+}
+
+/*.body {
   background: url('../images/americaMoney.jpg') no-repeat left top;
   background-size: contain;
   min-height: 25em;
+}*/
+
+.electionCountdown {
+  margin-left: 25em;
 }
 
 .banner {
@@ -34,4 +43,17 @@
 
 .muteGrey {
   color: #000;
+}
+
+.navbar-nav {
+  padding: 1%;
+  font-size: 2em;
+}
+
+#redHover:hover {
+  color: red;
+}
+
+#blueHover:hover {
+  color: blue;
 }
