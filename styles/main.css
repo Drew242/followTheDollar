@@ -10,11 +10,17 @@ body {
 }*/
 
 .electionCountdown {
-  margin-left: 25em;
+  margin-left: 15em;
+  margin-top: 8em;
 }
 
-.banner {
+#header {
+  font-size: 3em;
+}
+
+.clockContainer {
   text-align: center;
+  padding: 5%;
 }
 
 .headshot {
