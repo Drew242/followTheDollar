@@ -8,6 +8,9 @@ angular.module('Dollar').config(function($routeProvider){
   $routeProvider.when('/trump', {
     templateUrl: 'views/trump.html'
   })
+  $routeProvider.when('/forecast', {
+    templateUrl: 'views/forecast.html'
+  })
 
   $routeProvider
     .otherwise({

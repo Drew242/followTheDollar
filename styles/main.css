@@ -24,20 +24,21 @@ body {
 }
 
 .headshot {
-  margin-top: 1%;
-  max-width: 10em;
+  margin-top: 3%;
+  max-width: 15em;
+  border-radius: 8px;
 }
 
 .dem {
   min-height: 5em;
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.5);;
   color: white;
   text-align: center;
 }
 
 .rep {
   min-height: 5em;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.5);;
   color: white;
   text-align: center;
 }
@@ -62,4 +63,9 @@ body {
 
 #blueHover:hover {
   color: blue;
+}
+
+.contentContainer {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.75);
 }

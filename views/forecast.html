@@ -1,0 +1,17 @@
+<div class='col-lg-10 col-lg-offset-1 contentContainer'>
+  <h1>Election Forecast</h1>
+    <p>Predictions are based on PollyVote's 'combining forecast' method. More
+       information about how their data is collected and how their predictions
+       are made can be found <a href="http://pollyvote.com/en/about/">here</a></p>
+  <ul class='candProf'>
+    <li>Date Published: {{ follow.prediction.fcdate | date }}</li>
+    <li>Survey Level: {{ follow.prediction.state }}</li>
+    <li>Forecast Component: {{ follow.prediction.fccomponent }}</li>
+    <li>Days until election: {{ follow.prediction.daystoelection }}</li>
+    <li>Republican Vote: {{ follow.prediction.fcrepvs }}</li>
+    <li>Democrat Vote: {{ follow.prediction.fcdemvs }}</li>
+    <li>Sample Size (If Available): {{ follow.prediction.sample }}</li>
+    <li>Margin of Error (If Available): {{ follow.prediction.moe }}</li>
+  </ul>
+  <p class="muteGrey">Source: {{ follow.prediction.sourcedocumentlink }} <a href"ttp://pollyvote.com/en/about/data/">PollyVote</a></p>
+</div>
