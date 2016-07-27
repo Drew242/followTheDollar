@@ -9,7 +9,8 @@ angular.module('Dollar').config(function($routeProvider){
     templateUrl: 'views/trump.html'
   })
   $routeProvider.when('/forecast', {
-    templateUrl: 'views/forecast.html'
+    templateUrl: 'views/forecast.html',
+    controller: 'followCtrl',
   })
 
   $routeProvider

@@ -22,7 +22,7 @@ function followCtrl(dollarFactory, predictionFactory) {
 
   pf.prediction.then(function (response) {
     follow.prediction = response.data.data[0];
-    follow.chart.options.data[0].dataPoints = [{
+    follow.chartOptions = [{
       y: follow.prediction.fcdemvs*1,
       label: 'Dems'
     }, {
@@ -32,8 +32,7 @@ function followCtrl(dollarFactory, predictionFactory) {
       y: (100 - (follow.prediction.fcrepvs*1 + follow.prediction.fcdemvs*1)),
       label: 'undecided/open'
     }]
-
-    follow.chart.render()
+    follow.chartRender(follow.chartOptions);
   })
 
   follow.countdown = function() {
@@ -47,7 +46,8 @@ function followCtrl(dollarFactory, predictionFactory) {
     	});
   }
 
-  follow.chartRender = function() {
+  follow.chartRender = function(chartOptions) {
+    var chartOptions = chartOptions || [{y: 52, label: "Dem"}, {y: 49, label: "Rep"}, {y: 1, label:"undecided"}];
     follow.chart = new CanvasJS.Chart("chartContainer",
     {
       title:{
@@ -62,11 +62,11 @@ function followCtrl(dollarFactory, predictionFactory) {
           startAngle:20,
           toolTipContent: "{label}: {y} - <strong>#percent%</strong>",
           indexLabel: "{label} #percent%",
-          dataPoints: []
+          dataPoints: chartOptions
         }
       ]
     });
+      follow.chart.render() 
+    }
 
-    window.chart = follow.chart
-  }
 }
