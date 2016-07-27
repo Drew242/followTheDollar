@@ -44,6 +44,7 @@ body {
 }
 
 .candProf {
+  font-size: 1.5em;
   list-style: none;
   text-align: left;
 }
@@ -66,6 +67,22 @@ body {
 }
 
 .contentContainer {
+  padding: 1%;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.75);
+}
+
+.margCont {
+  margin: 2%;
+}
+
+.wikilink {
+  font-size: 2em;
+  text-decoration: none;
+  color: white;
+}
+
+.wikilink:hover {
+  text-decoration: none;
+  color: black;
 }
