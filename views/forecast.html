@@ -4,15 +4,31 @@
     information about how their data is collected and how their predictions
     are made can be found <a href="http://pollyvote.com/en/about/">here</a></p>
     <div class='col-md-5 margCont'>
-      <ul class='candProf'>
-        <li>Date Published: {{ follow.prediction.fcdate | date }}</li>
-        <li>Survey Level: {{ follow.prediction.state }}</li>
-        <li>Forecast Component: {{ follow.prediction.fccomponent }}</li>
-        <li>Days until election: {{ follow.prediction.daystoelection }}</li>
-        <li>Republican Vote: {{ follow.prediction.fcrepvs }}</li>
-        <li>Democrat Vote: {{ follow.prediction.fcdemvs }}</li>
-        <li>Sample Size (If Available): {{ follow.prediction.sample }}</li>
-        <li>Margin of Error (If Available): {{ follow.prediction.moe }}</li>
+      <ul class='electProf'>
+        <li>
+          Date Published: <span class='pull-right'>{{ follow.prediction.fcdate | date }}</span>
+        </li>
+        <li>
+          Survey Level: <span class='pull-right'>{{ follow.prediction.state }}</span>
+        </li>
+        <li>
+          Forecast Component: <span class='pull-right'>{{ follow.prediction.fccomponent }}</span>
+        </li>
+        <li>
+          Days until election: <span class='pull-right'>{{ follow.prediction.daystoelection }}</span>
+        </li>
+        <li>
+          Republican Vote: <span class='pull-right' id='repRed'>{{ follow.prediction.fcrepvs }}</span>
+        </li>
+        <li>
+          Democrat Vote: <span class='pull-right' id='demBlue'>{{ follow.prediction.fcdemvs }}</span>
+        </li>
+        <li>
+          Sample Size (If Available): <span class='pull-right'>{{ follow.prediction.sample }}</span>
+        </li>
+        <li>
+          Margin of Error (If Available): <span class='pull-right'>{{ follow.prediction.moe }}</span>
+        </li>
       </ul>
     </div>
     <div class='col-md-6 margCont'>

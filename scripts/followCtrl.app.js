@@ -22,6 +22,18 @@ function followCtrl(dollarFactory, predictionFactory) {
 
   pf.prediction.then(function (response) {
     follow.prediction = response.data.data[0];
+    follow.chart.options.data[0].dataPoints = [{
+      y: follow.prediction.fcdemvs*1,
+      label: 'Dems'
+    }, {
+      y: follow.prediction.fcrepvs*1,
+      label: 'Rep'
+    }, {
+      y: (100 - (follow.prediction.fcrepvs*1 + follow.prediction.fcdemvs*1)),
+      label: 'undecided/open'
+    }]
+
+    follow.chart.render()
   })
 
   follow.countdown = function() {
@@ -36,7 +48,7 @@ function followCtrl(dollarFactory, predictionFactory) {
   }
 
   follow.chartRender = function() {
-    var chart = new CanvasJS.Chart("chartContainer",
+    follow.chart = new CanvasJS.Chart("chartContainer",
     {
       title:{
         text: "PollyVote Prediction",
@@ -50,15 +62,11 @@ function followCtrl(dollarFactory, predictionFactory) {
           startAngle:20,
           toolTipContent: "{label}: {y} - <strong>#percent%</strong>",
           indexLabel: "{label} #percent%",
-          dataPoints: [
-            {  y: 49, label: "Dem" },
-            {  y: 49, label: "Rep" },
-            {  y: 2, label: "Other/undecided" }
-          ]
+          dataPoints: []
         }
       ]
     });
-    chart.render();
-  }
 
+    window.chart = follow.chart
+  }
 }

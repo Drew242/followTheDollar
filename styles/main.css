@@ -20,7 +20,8 @@ body {
 
 .clockContainer {
   text-align: center;
-  padding: 5%;
+  padding: 1%;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .headshot {
@@ -45,6 +46,11 @@ body {
 
 .candProf {
   font-size: 1.5em;
+  list-style: none;
+  text-align: left;
+}
+
+.electProf {
   list-style: none;
   text-align: left;
 }
@@ -85,4 +91,12 @@ body {
 .wikilink:hover {
   text-decoration: none;
   color: black;
+}
+
+#repRed {
+  color: red;
+}
+
+#demBlue {
+  color: blue;
 }
